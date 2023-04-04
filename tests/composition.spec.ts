@@ -15,7 +15,8 @@ test.describe('Login Functinality by Inheritance',  () => {
     productPage = new ProductsPage(page);
     header = new Header(page);
     await page.goto('');
-  })
+    await page.waitForLoadState();
+  });
 
   test('Valid Logout', async ({page}) => {
     expect(await page.title()).toBe(title);

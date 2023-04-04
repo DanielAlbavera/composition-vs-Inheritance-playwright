@@ -3,7 +3,7 @@ import { LoginPage } from '../inheritance/login.page';
 import { ProductsPage } from '../inheritance/products.page';
 import { Header } from '../composition/header.component';
 
-test.describe('Login Functinality by Both',  () => {
+test.describe('Login Functinality by Combining both Patterns',  () => {
 
   let loginPage: LoginPage;
   let productPage: ProductsPage;
@@ -15,9 +15,10 @@ test.describe('Login Functinality by Both',  () => {
     productPage = new ProductsPage(page);
     header = new Header(page);
     await page.goto('');
-  })
+    await page.waitForLoadState();
+  });
 
-  test('Valid Logout', async ({page}) => {
+  test('Valid Login/Logout', async () => {
     expect(await loginPage.getTitle()).toBe(title);
     await loginPage.login();
     expect(await productPage.getTitle()).toBe(title);
