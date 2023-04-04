@@ -18,6 +18,10 @@ test.describe('Login Functinality by Combining both Patterns',  () => {
     await page.waitForLoadState();
   });
 
+  test.afterEach( async ({page}) => {
+    await page.close();
+  });
+
   test('Valid Login/Logout', async () => {
     expect(await loginPage.getTitle()).toBe(title);
     await loginPage.login();

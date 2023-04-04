@@ -15,6 +15,10 @@ test.describe('Login Functinality by Inheritance',  () => {
     await page.waitForLoadState();
   });
 
+  test.afterEach( async ({page}) => {
+    await page.close();
+  });
+
   test('Valid Login', async () => {
     expect(await loginPage.getTitle()).toBe(title);
     await loginPage.login();

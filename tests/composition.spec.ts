@@ -18,6 +18,10 @@ test.describe('Login Functinality by Inheritance',  () => {
     await page.waitForLoadState();
   });
 
+  test.afterEach( async ({page}) => {
+    await page.close();
+  });
+
   test('Valid Logout', async ({page}) => {
     expect(await page.title()).toBe(title);
     await loginPage.usernameInput.fill('standard_user');
