@@ -14,7 +14,7 @@ test.describe('Login Functinality by Combining both Patterns',  () => {
     loginPage = new LoginPage(page);
     productPage = new ProductsPage(page);
     header = new Header(page);
-    await page.goto('');
+    await loginPage.navigate('');
     await page.waitForLoadState();
   });
 

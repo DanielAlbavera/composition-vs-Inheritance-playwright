@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../inheritance/login.page';
 import { ProductsPage } from '../inheritance/products.page';
 
-test.describe('Login Functinality by Inheritance',  () => {
+test.describe('Login Functinality by Inheritance pattern',  () => {
 
   let loginPage: LoginPage;
   let productPage: ProductsPage;

@@ -3,7 +3,7 @@ import { LoginPage } from '../composition/login.page';
 import { ProductsPage } from '../composition/products.page';
 import { Header } from '../composition/header.component';
 
-test.describe('Login Functinality by Inheritance',  () => {
+test.describe('Login Functinality by Composition pattern',  () => {
 
   let loginPage: LoginPage;
   let productPage: ProductsPage;
